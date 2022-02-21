@@ -22,6 +22,7 @@ defmodule Flightex.Bookings.Report do
     |> Enum.filter(fn item ->
       item.complete_date >= start_date && item.complete_date <= end_date
     end)
+    |> Enum.sort(:asc)
     |> Enum.map(&build_string/1)
   end
 

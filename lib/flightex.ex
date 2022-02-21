@@ -13,11 +13,11 @@ defmodule Flightex do
     UserAgent.start_link(%{})
   end
 
-  def create_report() do
-    Report.create()
+  def create_report(filename \\ "report.csv") do
+    Report.create(filename)
   end
 
-  def create_report(start_date, final_date) do
-    Report.create(start_date, final_date)
+  def create_report(filename \\ "report.csv", start_date, final_date) do
+    Report.create(filename, start_date, final_date)
   end
 end
