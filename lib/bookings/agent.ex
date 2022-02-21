@@ -31,4 +31,6 @@ defmodule Flightex.Bookings.Agent do
       user -> {:ok, user}
     end
   end
+
+  def get_all, do: Agent.get(__MODULE__, & &1)
 end
